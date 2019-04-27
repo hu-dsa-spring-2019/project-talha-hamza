@@ -1,15 +1,135 @@
-Nodes lower ground={'001':'LEARN',
-                    '002':'Indoor Games',
-                    '003':'Fries',
-                    '004':'Junction',
-                    '005':'EE Labs',
-                    '006':'Sports Court',
-                    '007':'Dhaba',
-                    '008','Exit',
-                    '009':'Washroom01',
-                    '010':'Washroom02',
-                    '011':'Pool',
-                    '012':'Lift01'}
+nodes={'E-017':'Dukan',
+   'E-013':'Tapal Cafeteria',
+   'E-012':'Rangoonwala Classroom',
+   'E-011':'Dinshaw Seminar Room',
+   'E-010':'Visualization & Graphic Lab',
+   'E-003':'Linux & Networking Lab',
+   'E-002':'Media Mouck-up Studio',
+   'C-025':'Engineering Workshop',
+   'C-023':'Head of Administration and Campus Services',
+   'C-022':'Administration and Safety Offices',
+   'C-018':'Female Gym',
+   'C-017':'Co-Ed Gym',
+   'C-015':'Classroom',
+   'C-007':'Project Lab',
+   'C-004':'Power Lab',
+   'C-001':'Circuits & Electronics Lab',
+   'W-007':'Plantroom',
+   'W-004':'Facilities Offices',
+   'LB-001':'EHSAS',
+   '001':'LEARN',
+   '002':'Indoor Games',
+   '003':'Fries',
+   '004':'Junction',
+   '005':'EE Labs',
+   '006':'Sports Court',
+   '007':'Dhaba',
+   '008':'Exit',
+   '009':'Washroom01',
+   '010':'Washroom02',
+   '011':'Pool',
+   '012':'Lift01',
+
+   'E-121':'Soorty Lecture Theater',
+   'E-105':'Faculty Pod',
+   'E-101':'Cassim Computing Lab',
+   'E-100':'Agha Multipurpose Hall',
+   'C-110':'Student Lounge',
+   'C-109':'Arif Habib Classroom',
+   'C-114':'Faculty Pod',
+   'C-100':'Faculty Pod',
+   'W-114':'Dig. Sys. & Instrumentation',
+   'W-111':'Communication Lab',
+   'W-110':'G.M. Adamjee Math Lab',
+   'W-121':'Ecology Lab',
+   'W-118':'Chemistry Lab',
+   'W-100':'Physics Lab',
+   'LB-100':'Library & Information Commons',
+   'SC-100':'Student Center',
+   '106':'Entrance',
+   '107':'CS1',
+   '108':'CS2',
+   '109':'CS3',
+   '110':'CS4',
+   '111':'CS5',
+   '112':'CS6',
+   '113':'CS7',
+   '114':'CS8',
+   '115':'CS9',
+   '116':'Water Courtyard',
+   '117':'Corn',
+   '118':'Library Door',
+   '119':'Cafe2Go',
+   '120':'Info Commons',
+   '121':'HS & SL',
+   '122':'R1',
+   '123':'R2',
+   '124':'R3',
+   '125':'DSA',
+   '126':'ATM',
+   '127':'Courts',
+   '128':'Lift11',
+   '129':'Bank',
+   '130':'Health Services',
+   '131':'Student Life',
+   '132':'Writing Center',
+   '133':'Reception',
+   '134':'Lift12',
+   '135':'Lift13',
+   '136':'Washroom11',
+   '137':'Washroom12',
+   '138':'Washroom13',
+   '139':'Washroom14',
+   '140':'Up',
+   '141':'Down',
+
+   'N-200':'Faculty Pod',
+   'N-219':'Gulamali Habib Classroom',
+   'N-220':'Standard Chartered Classroom',
+   'E-220':'Tariq Rafi Lecture Theater',
+   'E-226':'Film Studio',
+   'E-215':'Auditorium',
+   'C-203':'Faculty Pod',
+   'C-200':'Center for Pedagogical Excellence',
+   'W-244':'Design Studio',
+   'W-243':'Classroom',
+   'W-242':'Javat Seminar Room',
+   'W-221':'Faculty Pod',
+   'W-234':'Mahmood Nensey Classroom',
+   'LB-200':'Library & Information Commons',
+   '201':'To Baithak',
+   '202':'To Faculty',
+   '203':'slope 2',
+   '204':'Corridor 1',
+   '205':'Corridor 2',
+   '206':'Auditorium Stage',
+   '207':'Library Reception',
+   '208':'stairs1',
+   '209':'Tables',
+   '210':'Washroom21',
+   '211':'Washroom22',
+   '212':'Washroom23',
+   '213':'Yohsin',
+   '214':'Lift21',
+   '215':'Lift22',
+   '216':'Lift23',
+   '217':'Baithak',
+   '218':'stairs2',
+   '219':'Up',
+   '220':'Down',
+
+   'W-300':'Faculty Pod',
+   '301':'Projects Lab',
+   '302':'Lift13',
+   'W-300':'Faculty Pod',
+
+   'N-411':'Child-Care Center',
+   'N-408':'Prayer Room (Female)',
+   'N-407':'Prayer Room (Male)',
+   'N-400':'Staff Dining Hall'
+   '401':'Lift14'
+   }
+
 Edges lower ground=[('005','109',35),
                     ('005','C-001',16),
                     ('005','001',48),
@@ -48,38 +168,49 @@ Edges lower ground=[('005','109',35),
                     ('008','E-226',100),
                     ('004','E-015',105)]
                     
+Edges ground floor=[('124','127',205),('124','123',31),('124','116',31),
+       ('123','122',25),('123','128',14),('123','W-100',14),('123','W-110',14),
+       ('122','121',41),('122','129',75),
+       ('129','106',58),
+       ('W-114','116',79),('W-114','C-110A',57),
+       ('W-111','116',79),('W-111','C-110A',57),
+       ('W-121','116',79),('W-121','C-110A',57),
+       ('W-118','116',79),('W-118','C-110A',57),
+       ('116','117',16),('116','W-100',26),('116','W-110',26),('116','128',26),
+       ('128','Up',7),('128','138',8),
+       ('W-100','Up',7),('W-100','138',8),
+       ('W-110','Up',7),('W-110','138',8),
+       ('130','121',24),
+       ('121','131',11),
+       ('Up','Down',4),('Up','W-100',7),('Up','W-110',7),('Up','128',7),
+       ('Down','Up',4),('Down','117',20),
+       ('117','Down',16),('117','C-109',6),
+       ('C-109','117',6),
+       ('134','SC-100',17),('134','108',26),
+       ('C-110A','C-015',33),('C-110A','114',17),
+       ('SC-100','136',14),
+       ('127','115',43),
+       ('115','C-114',11),('115','C-110',17),('115','003',50),
+       ('C-110','139',14),
+       ('139','C-110',14),
+       ('114','C-110',10),('114','113',22),
+       ('113','E-121',21),('113','126',43),
+       ('E-121','114',21),
+       ('112','126',20),('112','C-109',26),('112','111',11),
+       ('111','C-100',10),('111','110',37),
+       ('110','131',18),('110','118',17),('110','109',15),('110','136',35),
+       ('109','005',35),('109','133',34),
+       ('133','SC-100',18),
+       ('108','133',9),
+       ('107','108',23),('107','E-100',20),('107','106',23),
+       ('120','LB-200',50),('120','118',14),('120','135',28),('120','137',18),
+       ('132','120',31),
+       ('119','118',13),
+       ('125','119',20),('125','E-101',5),
+       ('E-105','125',9),('E-105','004',105),
+       ('135','132',3),
+       ]
 
-
-
-
-
-
-
-
-
-
-
-
-Nodes first floor={'201':'To Baithak',
-                   '202':'To Faculty',
-                   '203':'slope 2',
-                   '204':'Corridor 1',
-                   '205':'Corridor 2',
-                   '206':'Auditorium Stage',
-                   '207':'Library Reception',
-                   '208':'stairs1',
-                   '209':'Tables',
-                   '210':'Washroom21'
-                   '211':'Washroom22'
-                   '212':'Washroom23'
-                   '213':'Yohsin'
-                   '214':'Lift21'
-                   '215':'Lift22'
-                   '216':'Lift23'
-                   '217':'Baithak'
-                   '218':'stairs2'
-                   '219':'Up'
-                   '220':'Down'}
 Edges first floor=[('217','201',37),
                    ('201','W-243',8.5),
                    ('W-243','W-244',9),
@@ -123,27 +254,12 @@ Edges first floor=[('217','201',37),
                    ('215','208',8.5)]
 
 
-
-
-
-Nodes second floor={'301':'Projects Lab',
-                    '302':'Lift13',
-                    'W-300':'Faculty Pod'}
 Edges second floor=[('301','W-300',11),
 		    ('302','W-300',11),
 		    ('301','219',85)
 		    ('302','219',85)]
 
-
-
-
-
-Nodes third floor={'401':'Lift14'}
 Edges third floor=[('401','402',10),
                    ('402','N-400',17),
                    ('402','N-408',16),
                    ('N-408','N-407',7)]
-
-                   
-                   
-                   
