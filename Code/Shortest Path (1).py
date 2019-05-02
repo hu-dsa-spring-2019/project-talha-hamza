@@ -1,5 +1,53 @@
 G={}
 
+source=input('Enter Your Location: ')
+destination=input('Enter Your Destination: ')
+
+import turtle
+
+background=turtle.Screen()
+
+Coordinates={
+    'E-017':['Dukan',(-360,-23)],
+   'E-013':['Tapal Cafeteria',(-360,-37)],
+   'E-012':['Rangoonwala Classroom',(-268,-72)],
+   'E-011':['Dinshaw Seminar Room',(-262,-72)],
+   'E-010':['Visualization & Graphic Lab',(-250,-72)],
+   'E-003':['Linux & Networking Lab',(-200,-67)],
+   'E-002':['Media Mouck-up Studio',(-200,-60)],
+   'C-025':['Engineering Workshop',(-294,60)],
+   'C-023':['Head of Administration and Campus Services',(-400,20)],
+   'C-022':['Administration and Safety Offices',(-400,45)],
+   'C-018':['Female Gym',(-430,12)],
+   'C-017':['Co-Ed Gym',(-430,12)],
+   'C-015':['Classroom',(-400,-9)],
+   'C-007':['Project Lab',(-277,-37)],
+   'C-004':['Power Lab',(-245,-37)],
+   'C-001':['Circuits & Electronics Lab',(-200,-37)],
+   'W-007':['Plantroom',(-335,95)],
+   'W-004':['Facilities Offices',(-280,60)],
+   'LB-001':['EHSAS',(-120,-60)],
+   '001':['LEARN',(-175,37)],
+   '002':['Indoor Games',(-400,12)],
+   '003':['Fries',(-400,-22)],
+   '004':['Junction',(-290,-65)],
+   '005':['EE Labs',(-172,-33)],
+   '006':['Sports Court',(-510,-22)],
+   '007':['Dhaba',(-400,-50)],
+   '008':['Exit',(-315,-75)],
+   '009':['Washroom01',(-360,-8)],
+   '010':['Washroom02',(-210,-67)],
+   '011':['Pool',(-400,60)],
+   '012':['Lift01',(-255,60)],
+
+    '128':['Lift11',(-250,70)],
+    '214':['Lift21',(-250,70)],
+
+    'W-300':['Faculty Pod',(-350,70)],
+   'W-311':['Projects Lab',(-250,35)],
+   '302':['Lift31',(-250,70)]
+    }
+
 N={'E-017':'Dukan',
    'E-013':'Tapal Cafeteria',
    'E-012':'Rangoonwala Classroom',
@@ -354,7 +402,27 @@ def dijkstra(G,source,destination):
                    
         visited.append(current_node)
         un_visited.remove(current_node)
+    path=[]
+    while source!=destination:
+        parent=parents[destination]
+        distance=distances[destination]
+        path.append((parent,destination,distance))
+        destination=parent
+    return path[::-1]
 
- 
+shortest_path=(dijkstra(graph(G,N,E),source,destination))
+print(shortest_path)
+print('\n')
+
+print('Student.goto'+str(Coordinates[shortest_path[0][0]][1]))
+print('Student.showturtle()')
+print('Student.pendown()')
+for i in shortest_path:
+    if i[1]=='W-300' or i[1]=='W-311' or i[1]=='302' or i[1]=='128' or i[1]=='214':
+        print("background.bgpic('2nd Floor.gif')")
+        print('Student.goto'+str(Coordinates[i[1]][1]))
+    else:
+        print('Student.goto'+str(Coordinates[i[1]][1]))
+
 
 
