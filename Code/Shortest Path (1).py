@@ -7,6 +7,7 @@ import turtle
 
 background=turtle.Screen()
 
+# Coordinates dictionary is for lower ground and 2nd floor turtle GUI.
 Coordinates={
     'E-017':['Dukan',(-360,-23)],
    'E-013':['Tapal Cafeteria',(-360,-37)],
@@ -47,6 +48,7 @@ Coordinates={
    'W-311':['Projects Lab',(-250,35)],
    '302':['Lift31',(-250,70)]
     }
+
 
 N={'E-017':'Dukan',
    'E-013':'Tapal Cafeteria',
@@ -403,6 +405,7 @@ def dijkstra(G,source,destination):
         visited.append(current_node)
         un_visited.remove(current_node)
     path=[]
+    # This while loop will generate the shortest path.
     while source!=destination:
         parent=parents[destination]
         distance=distances[destination]
@@ -413,7 +416,7 @@ def dijkstra(G,source,destination):
 shortest_path=(dijkstra(graph(G,N,E),source,destination))
 print(shortest_path)
 print('\n')
-
+# Below are the directions being printed for the turtle GUI.
 print('Student.goto'+str(Coordinates[shortest_path[0][0]][1]))
 print('Student.showturtle()')
 print('Student.pendown()')
@@ -423,6 +426,3 @@ for i in shortest_path:
         print('Student.goto'+str(Coordinates[i[1]][1]))
     else:
         print('Student.goto'+str(Coordinates[i[1]][1]))
-
-
-
