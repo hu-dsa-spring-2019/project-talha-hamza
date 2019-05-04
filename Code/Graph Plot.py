@@ -1,4 +1,5 @@
-# Author: Aric Hagberg (hagberg@lanl.gov)
+# Reference:  Author: Aric Hagberg (hagberg@lanl.gov)
+# In this graph dotted blue lines represent zero distance between floors connected through lift while balck lines represent weighted connections.
 import matplotlib.pyplot as plt
 import networkx as nx
 
